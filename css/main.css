@@ -333,7 +333,7 @@ nav {
    HEADER
    ========================================================================== */
 .header {
-  padding: 100px 0 100px;
+  padding: 100px 0 0;
   text-align: center;
 }
 .logo-name {
@@ -450,8 +450,11 @@ nav {
   text-align: center;
 }
 .schedule-slot {
-  width: 250px;
+/*width: 250px;*/
   font-size: 16px;
+}
+.schedule-time {
+  width: 100px;
 }
 .speakers-company {
   display: block;
@@ -822,9 +825,11 @@ nav {
 .schedule-tbl th {
   border-bottom: 1px solid #e7e7e7;
 }
+/*
 .schedule-tbl tbody tr:nth-child(2n+1) {
   background: #f6f6f6;
 }
+*/
 .schedule-tbl th {
   color: #2b2b2b;
 }
@@ -835,6 +840,9 @@ nav {
   color: #999;
 }
 .schedule-slot {
+  color: #2b2b2b;
+}
+.schedule-description {
   color: #2b2b2b;
 }
 .schedule-tbl tbody tr:hover {
