@@ -39,8 +39,31 @@
 
   <link rel="stylesheet" type="text/css" href="./css/main.css">
 
+  <script type="text/javascript"> 
+    function display_c(){
+      var refresh=1000; 
+      mytime=setTimeout('display_ct()',refresh)
+    }
+    function display_ct() {
+      var x = new Date()
+      var x1 = x.toUTCString();
+      var utc = x.getTime() + (x.getTimezoneOffset() * 60000);
+      var offset = +2;
+      var nd = new Date(utc + (3600000*offset));
+      var hour=nd.getHours();
+      var minute=nd.getMinutes();
+      var second=nd.getSeconds();
+      if(hour <10 ){hour='0'+hour;}
+      if(minute <10 ) {minute='0' + minute; }
+      if(second<10){second='0' + second;}
+      var x3 = hour+':'+minute+':'+second
+      document.getElementById('ct').innerHTML = x3;
+      display_c();
+    }
+  </script>
+
 </head>
-<body>
+<body onload=display_ct();>
   <div class="global">
 
     <nav id="nav">
@@ -59,14 +82,8 @@
       </li>
     
       <li class="nav-item">
-        <a href="#cfp" title="Call For Abstracts" class="nav-link">
-          Call For Abstracts
-        </a>
-      </li>
-    
-      <li class="nav-item">
-        <a href="#speakers" title="Speakers" class="nav-link">
-          Speakers
+        <a href="#speakers" title="Invited speakers" class="nav-link">
+          Invited speakers
         </a>
       </li>
     
@@ -135,14 +152,6 @@
 1. To identify ethical, legal and societal <b>issues</b> within robotics and automation.<br>
 2. To introduce and discuss technical <b>methods</b> for addressing these issues.</p>
 
-<p><b>Workshop overview:</b></p>
-<p>Session 1: Principles for ethical robotics<br>
-Session 2: Methods for ethical robotics<br>
-(Lunch)<br>
-Session 3: Privacy issues and methods<br>
-Session 4: Societal impact</p>
-
-<p><b>Abstract:</b></p>
 <p itemprop="description">Intelligent robots come with promises of great value to society but can also be seen as threats in terms of <b>job loss, increased social inequalities, transparency and privacy, age/race/gender bias in training or design, autonomous warfare, excessive delegation of decision-making, etc</b>.
 This workshop aims to put forth a diversity of viewpoints from experts not only in robotics and AI but also disciplines that are close to the real-world use of robots: economics, social science, gender studies, and philosophy. Together we want to explore possible outcomes of increased uptake of intelligent robots, and contribute to ethical frameworks and good practices.</p>
 
@@ -154,66 +163,22 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
           <section class="location" id="location">
             <h2 class="section-title">Location</h2>
 
-<p style="color:#FF0000; font-size: 1.9em;">COVID-19 update: the workshop will take place virtually through online streaming, more details to follow.</p>
+<p itemprop="description">The workshop will be hosted at the <a href="https://www.icra2020.org/" target="_blank">2020 IEEE International Conference on Robotics and Automation (ICRA 2020)</a> - now virtual.<br>
+<b>Slack channel:</b> <a href="https://icra20.slack.com/app_redirect?channel=ws17" target="_blank">#ws17</a><br>
+<span style="color:#FF0000;"><b>Live streaming link:</b> (URL to be confirmed)</span><br>
 
-<p itemprop="description">The workshop will be hosted at the <a href="https://www.icra2020.org/" target="_blank">2020 IEEE International Conference on Robotics and Automation (ICRA 2020)</a>.<br>
-<span style="text-decoration:line-through;"><b>Location:</b> Palais des congrès de Paris, Paris, France.</span><br>
-<b>Location:</b> virtual (URL to be confirmed)</p>
-
-
-
-
-
-          </section>
-        
-          <section class="cfp" id="cfp">
-            <h2 class="section-title">Call For Abstracts</h2>
-
-<p style="color:#FF0000; font-size: 1.9em;">COVID-19 update: please take note of the new timeline for paper submissions.</p>
-
-<p itemprop="description">We welcome the submission of extended abstracts (max 2 pages) related to the workshop's topics of interest. Both unpublished original contributions and previously published work may be submitted. We specifically encourage submission of position papers that address the ethical issues involved in robot design, deployment and use; as well as the techniques which will be required to avoid or alleviate these issues. These papers will be used to initiate discussion on the topics during the workshop, and will be presented both as short oral presentations and posters.</p>
-
-<p>We accept various kinds of papers:<br>
-1) Discussion papers (discussing an ethical/societal/legal issue related to automation and robotics)<br>
-2) Method papers (introducing a technical method to address or to account for an ethical concern)<br>
-3) User study papers (investigating user perceptions or interactions with a system)<br>
-4) New: Dystopia papers*
 </p>
 
-<p>*Dystopia papers are provocative papers that explicitly discuss how science fiction dystopias from a book, movie or TV series (e.g. Black Mirror) could take place and avoided in practice. The authors should pick one such story and discuss what kind of methods, research, and/or societal and legal interventions need to come about to avoid such a scenario. These should still be high-quality academic contributions, however with a different touch to its motivation and storyline. Inspired by the <a href="https://kmitd.github.io/recoding-black-mirror/" target="_blank">Recoding Black Mirror Workshop</a>.</p>
 
-<p><b>Topics of interest</b></p>
 
-<p>
-- Fairness in robotics and automation<br>
-- Accountability in robotics and automation<br>
-- Transparency in robotics and automation<br>
-- Explainability in robotics and automation<br>
-- Privacy in robotics and automation<br>
-- Ethics of robotics and automation<br>
-- Law for robotics and automation<br>
-- Economy of robotics and automation<br>
-- Governance of robotics and automation
-</p>
 
-<p><b>Important Dates</b></p>
-
-<p>
-- Paper submission deadline: May 15, 2020 <br>
-- Author notification: May 22, 2020 <br>
-- Camera-ready submission: June 1, 2020 <br>
-</p>
-
-<p><b>Submission instructions </b></p>
-
-<p>The manuscripts should use the IEEE ICRA two-column format, maximum 2 pages, and a PDF copy of the manuscript should be submitted through the dedicated <a href="https://easychair.org/conferences/?conf=against20">EasyChair website</a>.</p>
-
-<p>Accepted contributions will be presented both as short oral presentations and as posters. The presentation should be up to 3-minutes to highlight the key findings of their research and identify their poster to the audience. The papers will be posted on this website unless otherwise requested by the authors.</p>
 
           </section>
         
           <section class="speakers" id="speakers">
-            <h2 class="section-title">Speakers</h2>
+            <h2 class="section-title">Invited speakers</h2>
+
+<p style="color:#FF0000; font-size: 1.9em;">All times are Paris (CEST) time.</p>
 
 <ul class="speakers-list">
 
@@ -226,38 +191,15 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
 
     <h3 class="speech-title">
       
-      <span class="speech-time">9h00 - 9h30</span>
+      <span class="speech-time">10:30 - 11:00</span>
       
       <br><br>
-      <span>Ethical robotics</span>
+      <span>Robot Accident Investigation: a case study in Responsible Robotics</span>
     </h3>
 
     <h3 class="speakers-name">Alan Winfield
       
       <a href="http://alanwinfield.blogspot.com/" target="_blank" title="www"> www </a>
-      
-    </h3>
-    <p class="speakers-bio"></p>
-  </li>
-
-  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-    
-      <span class="speaker-photo">
-        <img class="photo" src="./img/ajung.jpg" alt="AJung Moon" itemprop="image">
-      </span>
-    
-
-    <h3 class="speech-title">
-      
-      <span class="speech-time">9h30 - 10h00</span>
-      
-      <br><br>
-      <span>Ethical human-robot interaction</span>
-    </h3>
-
-    <h3 class="speakers-name">AJung Moon
-      
-      <a href="https://www.ajungmoon.com/" target="_blank" title="www"> www </a>
       
     </h3>
     <p class="speakers-bio"></p>
@@ -272,7 +214,7 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
 
     <h3 class="speech-title">
       
-      <span class="speech-time">10h00 - 10h30</span>
+      <span class="speech-time">11:00 - 11:30</span>
       
       <br><br>
       <span>Glass is the new black: Going Beyond High-Level Guidelines</span>
@@ -289,174 +231,13 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
   <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
     
       <span class="speaker-photo">
-        <img class="photo" src="./img/anca.png" alt="Anca Dracan" itemprop="image">
-      </span>
-    
-
-    <h3 class="speech-title">
-      
-      <span class="speech-time">11h00 - 11h30</span>
-      
-      <br><br>
-      <span>Value alignment in robotics</span>
-    </h3>
-
-    <h3 class="speakers-name">Anca Dracan
-      
-      <a href="https://people.eecs.berkeley.edu/~anca/" target="_blank" title="www"> www </a>
-      
-    </h3>
-    <p class="speakers-bio"></p>
-  </li>
-
-  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-    
-      <span class="speaker-photo">
-        <img class="photo" src="./img/daniele.jpg" alt="Daniele Magazzeni" itemprop="image">
-      </span>
-    
-
-    <h3 class="speech-title">
-      
-      <span class="speech-time">11h30 - 12h00</span>
-      
-      <br><br>
-      <span>Methods for explainable robotics</span>
-    </h3>
-
-    <h3 class="speakers-name">Daniele Magazzeni
-      
-      <a href="https://nms.kcl.ac.uk/daniele.magazzeni/" target="_blank" title="www"> www </a>
-      
-    </h3>
-    <p class="speakers-bio"></p>
-  </li>
-
-  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-    
-      <span class="speaker-photo">
-        <img class="photo" src="./img/tathagata.jpg" alt="Tathagata Chakraborti" itemprop="image">
-      </span>
-    
-
-    <h3 class="speech-title">
-      
-      <span class="speech-time">12h00 - 12h30</span>
-      
-      <br><br>
-      <span>404. Expected plan not found.</span>
-    </h3>
-
-    <h3 class="speakers-name">Tathagata Chakraborti
-      
-      <a href="https://tchakra2.com" target="_blank" title="www"> www </a>
-      
-    </h3>
-    <p class="speakers-bio"></p>
-  </li>
-
-  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-    
-      <span class="speaker-photo">
-        <img class="photo" src="./img/christoph.jpg" alt="Christoph Lutz" itemprop="image">
-      </span>
-    
-
-    <h3 class="speech-title">
-      
-      <span class="speech-time">13h30 - 14h00</span>
-      
-      <br><br>
-      <span>Privacy issues in robotics</span>
-    </h3>
-
-    <h3 class="speakers-name">Christoph Lutz
-      
-      <a href="https://www.bi.edu/about-bi/employees/department-of-communication-and-culture/christoph-lutz/" target="_blank" title="www"> www </a>
-      
-    </h3>
-    <p class="speakers-bio"></p>
-  </li>
-
-  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-    
-      <span class="speaker-photo">
-        <img class="photo" src="./img/william.jpg" alt="William Smart" itemprop="image">
-      </span>
-    
-
-    <h3 class="speech-title">
-      
-      <span class="speech-time">14h00 - 14h30</span>
-      
-      <br><br>
-      <span>Methods for privacy-aware robotics</span>
-    </h3>
-
-    <h3 class="speakers-name">William Smart
-      
-      <a href="http://research.engr.oregonstate.edu/prg/" target="_blank" title="www"> www </a>
-      
-    </h3>
-    <p class="speakers-bio"></p>
-  </li>
-
-  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-    
-      <span class="speaker-photo">
-        <img class="photo" src="./img/hinyan.jpg" alt="Hin-Yan Liu" itemprop="image">
-      </span>
-    
-
-    <h3 class="speech-title">
-      
-      <span class="speech-time">14h30 - 15h00</span>
-      
-      <br><br>
-      <span>Discrimination issues in robotics</span>
-    </h3>
-
-    <h3 class="speakers-name">Hin-Yan Liu
-      
-      <a href="https://jura.ku.dk/english/staff/research/?pure=en/persons/503483" target="_blank" title="www"> www </a>
-      
-    </h3>
-    <p class="speakers-bio"></p>
-  </li>
-
-  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-    
-      <span class="speaker-photo">
-        <img class="photo" src="./img/ludovic.jpg" alt="Ludovic Righetti" itemprop="image">
-      </span>
-    
-
-    <h3 class="speech-title">
-      
-      <span class="speech-time">15h00 - 15h30</span>
-      
-      <br><br>
-      <span>Dual use issues in robotics</span>
-    </h3>
-
-    <h3 class="speakers-name">Ludovic Righetti
-      
-      <a href="https://engineering.nyu.edu/faculty/ludovic-righetti" target="_blank" title="www"> www </a>
-      
-    </h3>
-    <p class="speakers-bio"></p>
-  </li>
-
-  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-    
-      <span class="speaker-photo">
         <img class="photo" src="./img/dag.jpg" alt="Dag Balkmar" itemprop="image">
       </span>
     
 
     <h3 class="speech-title">
       
-      <span class="speech-time">16h00 - 16h30</span>
+      <span class="speech-time">11:30 - 12:00</span>
       
       <br><br>
       <span>Masculinity and autonomous vehicles</span>
@@ -479,7 +260,7 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
 
     <h3 class="speech-title">
       
-      <span class="speech-time">16h30 - 17h00</span>
+      <span class="speech-time">12:30 - 13:00</span>
       
       <br><br>
       <span>Labour market effects of artificial intelligence</span>
@@ -493,12 +274,152 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
     <p class="speakers-bio"></p>
   </li>
 
+  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+    
+      <span class="speaker-photo">
+        <img class="photo" src="./img/christoph.jpg" alt="Christoph Lutz" itemprop="image">
+      </span>
+    
+
+    <h3 class="speech-title">
+      
+      <span class="speech-time">13:00 - 13:30</span>
+      
+      <br><br>
+      <span>Privacy issues in robotics</span>
+    </h3>
+
+    <h3 class="speakers-name">Christoph Lutz
+      
+      <a href="https://www.bi.edu/about-bi/employees/department-of-communication-and-culture/christoph-lutz/" target="_blank" title="www"> www </a>
+      
+    </h3>
+    <p class="speakers-bio"></p>
+  </li>
+
+  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+    
+      <span class="speaker-photo">
+        <img class="photo" src="./img/ludovic.jpg" alt="Ludovic Righetti" itemprop="image">
+      </span>
+    
+
+    <h3 class="speech-title">
+      
+      <span class="speech-time">14:30 - 15:00</span>
+      
+      <br><br>
+      <span>Dual use issues in robotics</span>
+    </h3>
+
+    <h3 class="speakers-name">Ludovic Righetti
+      
+      <a href="https://engineering.nyu.edu/faculty/ludovic-righetti" target="_blank" title="www"> www </a>
+      
+    </h3>
+    <p class="speakers-bio"></p>
+  </li>
+
+  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+    
+      <span class="speaker-photo">
+        <img class="photo" src="./img/ajung.jpg" alt="AJung Moon" itemprop="image">
+      </span>
+    
+
+    <h3 class="speech-title">
+      
+      <span class="speech-time">15:00 - 15:30</span>
+      
+      <br><br>
+      <span>Ethical human-robot interaction</span>
+    </h3>
+
+    <h3 class="speakers-name">AJung Moon
+      
+      <a href="https://www.ajungmoon.com/" target="_blank" title="www"> www </a>
+      
+    </h3>
+    <p class="speakers-bio"></p>
+  </li>
+
+  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+    
+      <span class="speaker-photo">
+        <img class="photo" src="./img/tathagata.jpg" alt="Tathagata Chakraborti" itemprop="image">
+      </span>
+    
+
+    <h3 class="speech-title">
+      
+      <span class="speech-time">15:30 - 16:00</span>
+      
+      <br><br>
+      <span>404. Expected plan not found.</span>
+    </h3>
+
+    <h3 class="speakers-name">Tathagata Chakraborti
+      
+      <a href="https://tchakra2.com" target="_blank" title="www"> www </a>
+      
+    </h3>
+    <p class="speakers-bio"></p>
+  </li>
+
+  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+    
+      <span class="speaker-photo">
+        <img class="photo" src="./img/william.jpg" alt="William Smart" itemprop="image">
+      </span>
+    
+
+    <h3 class="speech-title">
+      
+      <span class="speech-time">16:30 - 17:00</span>
+      
+      <br><br>
+      <span>Methods for privacy-aware robotics</span>
+    </h3>
+
+    <h3 class="speakers-name">William Smart
+      
+      <a href="http://research.engr.oregonstate.edu/prg/" target="_blank" title="www"> www </a>
+      
+    </h3>
+    <p class="speakers-bio"></p>
+  </li>
+
+  <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+    
+      <span class="speaker-photo">
+        <img class="photo" src="./img/anca.png" alt="Anca Dragan" itemprop="image">
+      </span>
+    
+
+    <h3 class="speech-title">
+      
+      <span class="speech-time">17:00 - 17:30</span>
+      
+      <br><br>
+      <span>Value alignment in robotics</span>
+    </h3>
+
+    <h3 class="speakers-name">Anca Dragan
+      
+      <a href="https://people.eecs.berkeley.edu/~anca/" target="_blank" title="www"> www </a>
+      
+    </h3>
+    <p class="speakers-bio"></p>
+  </li>
+
 </ul>
 
           </section>
         
           <section class="schedule" id="schedule">
             <h2 class="section-title">Schedule</h2>
+
+<p style="color:#FF0000; font-size: 1.9em;">All times are Paris (CEST) time. Time now: <span id='ct'></span></p>
 
 <p></p>
 <div class="schedule-tbl">
@@ -508,13 +429,13 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
       
         
           <tr class="schedule-other">
-            <td class="schedule-slot" colspan="3"><b>Session 1: Principles for ethical robotics</b></td>
+            <td class="schedule-slot" colspan="3"><b>Session 1: responsible robotics and societal impact</b></td>
           </tr>
         
       
         
           <tr class="schedule-other">
-            <td class="schedule-time">8h45 - 9:00</td>
+            <td class="schedule-time">10:00 - 10:30</td>
             <td class="schedule-slot">Opening (organizers)</td>
             <td class="schedule-description"></td>
           </tr>
@@ -522,7 +443,7 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
       
         
           <tr>
-            <td class="schedule-time">9h00 - 9h30</td>
+            <td class="schedule-time">10:30 - 11:00</td>
             <td class="schedule-slot">
             
               <span class="speaker-photo">
@@ -533,13 +454,178 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
               <b>Alan Winfield</b>
               <span class="speakers-company">University of West of England</span>
             </td>
-            <td class="schedule-description"><b>"Ethical robotics"</b></td>
+            <td class="schedule-description"><b>"Robot Accident Investigation: a case study in Responsible Robotics"</b></td>
           </tr>
         
       
         
           <tr>
-            <td class="schedule-time">9h30 - 10h00</td>
+            <td class="schedule-time">11:00 - 11:30</td>
+            <td class="schedule-slot">
+            
+              <span class="speaker-photo">
+                <img class="photo" src="./img/AndreasTheodorou.jpg" alt="Andreas Theodorou">
+              </span>
+            
+
+              <b>Andreas Theodorou</b>
+              <span class="speakers-company">Umea University</span>
+            </td>
+            <td class="schedule-description"><b>"Glass is the new black: Going Beyond High-Level Guidelines"</b></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">11:30 - 12:00</td>
+            <td class="schedule-slot">
+            
+              <span class="speaker-photo">
+                <img class="photo" src="./img/dag.jpg" alt="Dag Balkmar">
+              </span>
+            
+
+              <b>Dag Balkmar</b>
+              <span class="speakers-company">Orebro University</span>
+            </td>
+            <td class="schedule-description"><b>"Masculinity and autonomous vehicles"</b></td>
+          </tr>
+        
+      
+        
+          <tr class="schedule-other">
+            <td class="schedule-time">12:00 - 12:30</td>
+            <td class="schedule-slot">Lunch</td>
+            <td class="schedule-description"></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">12:30 - 13:00</td>
+            <td class="schedule-slot">
+            
+              <span class="speaker-photo">
+                <img class="photo" src="./img/hildegunn.jpg" alt="Hildegunn Kyvik Nordås">
+              </span>
+            
+
+              <b>Hildegunn Kyvik Nordås</b>
+              <span class="speakers-company">NUPI</span>
+            </td>
+            <td class="schedule-description"><b>"Labour market effects of artificial intelligence"</b></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">13:00 - 13:30</td>
+            <td class="schedule-slot">
+            
+              <span class="speaker-photo">
+                <img class="photo" src="./img/christoph.jpg" alt="Christoph Lutz">
+              </span>
+            
+
+              <b>Christoph Lutz</b>
+              <span class="speakers-company">Norwegian Business School</span>
+            </td>
+            <td class="schedule-description"><b>"Privacy issues in robotics"</b></td>
+          </tr>
+        
+      
+        
+          <tr class="schedule-other">
+            <td class="schedule-slot" colspan="3"><b>Session 2: paper presentations and Q/A</b></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">13:30 - 13:40</td>
+            <td class="schedule-slot">
+            
+
+              <b>Tommaso Colombino, Shreepriya Shreepriya, Danilo Gallo</b>
+              <span class="speakers-company">Naver Labs Europe</span>
+            </td>
+            <td class="schedule-description"><b>"Designing a robot platform for disabled employees: some practical ethical considerations"</b></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">13:40 - 13:50</td>
+            <td class="schedule-slot">
+            
+
+              <b>Júlia Pareto Boada</b>
+              <span class="speakers-company">CSIC-UPC</span>
+            </td>
+            <td class="schedule-description"><b>"Social robotics and the outsource of agency: untangling the ethical approach"</b></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">13:50 - 14:00</td>
+            <td class="schedule-slot">
+            
+
+              <b>Benjamin Krarup, Senka Krivic, Felix Lindner, Derek Long</b>
+              <span class="speakers-company">King&#39;s College London &amp; Ulm University</span>
+            </td>
+            <td class="schedule-description"><b>"Towards Contrastive Explanations for Comparing the Ethics of Plans"</b></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">14:00 - 14:10</td>
+            <td class="schedule-slot">
+            
+
+              <b>P. Michael Furlong</b>
+              <span class="speakers-company">KBR Inc.</span>
+            </td>
+            <td class="schedule-description"><b>"Autonomy and Economic Pressures to Minimize Costs Conflicts with a Consumer Economy"</b></td>
+          </tr>
+        
+      
+        
+          <tr class="schedule-other">
+            <td class="schedule-time">14:10 - 14:30</td>
+            <td class="schedule-slot">Coffee break</td>
+            <td class="schedule-description"></td>
+          </tr>
+        
+      
+        
+          <tr class="schedule-other">
+            <td class="schedule-slot" colspan="3"><b>Session 3: ethics and methods for ethical robotics</b></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">14:30 - 15:00</td>
+            <td class="schedule-slot">
+            
+              <span class="speaker-photo">
+                <img class="photo" src="./img/ludovic.jpg" alt="Ludovic Righetti">
+              </span>
+            
+
+              <b>Ludovic Righetti</b>
+              <span class="speakers-company">University of New York</span>
+            </td>
+            <td class="schedule-description"><b>"Dual use issues in robotics"</b></td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="schedule-time">15:00 - 15:30</td>
             <td class="schedule-slot">
             
               <span class="speaker-photo">
@@ -556,72 +642,7 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
       
         
           <tr>
-            <td class="schedule-time">10h00 - 10h30</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="./img/AndreasTheodorou.jpg" alt="Andreas Theodorou">
-              </span>
-            
-
-              <b>Andreas Theodorou</b>
-              <span class="speakers-company">Umea University</span>
-            </td>
-            <td class="schedule-description"><b>"Glass is the new black: Going Beyond High-Level Guidelines"</b></td>
-          </tr>
-        
-      
-        
-          <tr class="schedule-other">
-            <td class="schedule-time">10h30 - 11h00</td>
-            <td class="schedule-slot">Coffee break and poster session</td>
-            <td class="schedule-description"></td>
-          </tr>
-        
-      
-        
-          <tr class="schedule-other">
-            <td class="schedule-slot" colspan="3"><b>Session 2: Methods for ethical robotics</b></td>
-          </tr>
-        
-      
-        
-          <tr>
-            <td class="schedule-time">11h00 - 11h30</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="./img/anca.png" alt="Anca Dracan">
-              </span>
-            
-
-              <b>Anca Dracan</b>
-              <span class="speakers-company">University of California Berkeley</span>
-            </td>
-            <td class="schedule-description"><b>"Value alignment in robotics"</b></td>
-          </tr>
-        
-      
-        
-          <tr>
-            <td class="schedule-time">11h30 - 12h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="./img/daniele.jpg" alt="Daniele Magazzeni">
-              </span>
-            
-
-              <b>Daniele Magazzeni</b>
-              <span class="speakers-company">King&#39;s College London</span>
-            </td>
-            <td class="schedule-description"><b>"Methods for explainable robotics"</b></td>
-          </tr>
-        
-      
-        
-          <tr>
-            <td class="schedule-time">12h00 - 12h30</td>
+            <td class="schedule-time">15:30 - 16:00</td>
             <td class="schedule-slot">
             
               <span class="speaker-photo">
@@ -638,38 +659,15 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
       
         
           <tr class="schedule-other">
-            <td class="schedule-time">12h30 - 13h30</td>
-            <td class="schedule-slot">Lunch</td>
+            <td class="schedule-time">16:00 - 16:30</td>
+            <td class="schedule-slot">Coffee break</td>
             <td class="schedule-description"></td>
           </tr>
         
       
         
-          <tr class="schedule-other">
-            <td class="schedule-slot" colspan="3"><b>Session 3: Privacy</b></td>
-          </tr>
-        
-      
-        
           <tr>
-            <td class="schedule-time">13h30 - 14h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="./img/christoph.jpg" alt="Christoph Lutz">
-              </span>
-            
-
-              <b>Christoph Lutz</b>
-              <span class="speakers-company">Norwegian Business School</span>
-            </td>
-            <td class="schedule-description"><b>"Privacy issues in robotics"</b></td>
-          </tr>
-        
-      
-        
-          <tr>
-            <td class="schedule-time">14h00 - 14h30</td>
+            <td class="schedule-time">16:30 - 17:00</td>
             <td class="schedule-slot">
             
               <span class="speaker-photo">
@@ -685,90 +683,31 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
         
       
         
-          <tr class="schedule-other">
-            <td class="schedule-slot" colspan="3"><b>Session 4: Societal impact</b></td>
-          </tr>
-        
-      
-        
           <tr>
-            <td class="schedule-time">14h30 - 15h00</td>
+            <td class="schedule-time">17:00 - 17:30</td>
             <td class="schedule-slot">
             
               <span class="speaker-photo">
-                <img class="photo" src="./img/hinyan.jpg" alt="Hin-Yan Liu">
+                <img class="photo" src="./img/anca.png" alt="Anca Dragan">
               </span>
             
 
-              <b>Hin-Yan Liu</b>
-              <span class="speakers-company">University of Copenhagen</span>
+              <b>Anca Dragan</b>
+              <span class="speakers-company">University of California Berkeley</span>
             </td>
-            <td class="schedule-description"><b>"Discrimination issues in robotics"</b></td>
-          </tr>
-        
-      
-        
-          <tr>
-            <td class="schedule-time">15h00 - 15h30</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="./img/ludovic.jpg" alt="Ludovic Righetti">
-              </span>
-            
-
-              <b>Ludovic Righetti</b>
-              <span class="speakers-company">University of New York</span>
-            </td>
-            <td class="schedule-description"><b>"Dual use issues in robotics"</b></td>
+            <td class="schedule-description"><b>"Value alignment in robotics"</b></td>
           </tr>
         
       
         
           <tr class="schedule-other">
-            <td class="schedule-time">15h30 - 16h00</td>
-            <td class="schedule-slot">Coffee break and poster session</td>
-            <td class="schedule-description"></td>
-          </tr>
-        
-      
-        
-          <tr>
-            <td class="schedule-time">16h00 - 16h30</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="./img/dag.jpg" alt="Dag Balkmar">
-              </span>
-            
-
-              <b>Dag Balkmar</b>
-              <span class="speakers-company">Orebro University</span>
-            </td>
-            <td class="schedule-description"><b>"Masculinity and autonomous vehicles"</b></td>
-          </tr>
-        
-      
-        
-          <tr>
-            <td class="schedule-time">16h30 - 17h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="./img/hildegunn.jpg" alt="Hildegunn Kyvik Nordås">
-              </span>
-            
-
-              <b>Hildegunn Kyvik Nordås</b>
-              <span class="speakers-company">NUPI</span>
-            </td>
-            <td class="schedule-description"><b>"Labour market effects of artificial intelligence"</b></td>
+            <td class="schedule-slot" colspan="3"><b>Session 4: panel</b></td>
           </tr>
         
       
         
           <tr class="schedule-other">
-            <td class="schedule-time">17h00 - 17h30</td>
+            <td class="schedule-time">17:30 - 18:30</td>
             <td class="schedule-slot">Panel discussion</td>
             <td class="schedule-description"></td>
           </tr>
@@ -866,8 +805,11 @@ This workshop aims to put forth a diversity of viewpoints from experts not only 
 - <a target="_blank" href="https://sites.google.com/view/fatecv">CVPR 2019 Workshop on Fairness Accountability Transparency and Ethics in Computer Vision</a><br>
 - <a target="_blank" href="http://icaps18.icaps-conference.org/xaip/">ICAPS 2018 workshop "Explainable AI Planning (XAIP)</a><br>
 - <a target="_blank" href="https://conferences.au.dk/robo-philosophy/previous-conferences/rp2018/">Robophilosophy 2018</a><br>
+- <a target="_blank" href="http://www.roboethics.org/icra2011/">ICRA 2011 workshop on Roboethics</a><br>
+- <a target="_blank" href="http://www.roboethics.org/icra2009/">ICRA 2009 workshop on Roboethics</a><br>
+- <a target="_blank" href="http://www.roboethics.org/icra2007/">ICRA 2007 workshop on Roboethics</a><br>
 - <a target="_blank" href="https://fatconference.org/">ACM Conference on Fairness Accoutability and Transparency (FAT*)</a><br>
-- <a target="_blank" href="https://www.aies-conference.com/">ACM Conference on Artificial Intelligence, Ethics, and Society</a>
+- <a target="_blank" href="https://www.aies-conference.com/">ACM Conference on Artificial Intelligence, Ethics, and Society</a><br>
 </p>
 
           </section>
